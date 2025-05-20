@@ -35,10 +35,29 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 ### 1. Selecting Metrics:
  **Invariant Metrics (Sanity Checks)**
 
- 1. Number of Cookies :- number of unique cookies to view the course overview page
- 2. Number of Clicks ("Start free trial") :- number of unique cookies to click the "Start free trial" button
- 4. Click-Through-Probability (CTP):- Number of Clicks/Number of Cookies
+ 1. **Number of Cookies** :- number of unique cookies to view the course overview page
+ 2. **Number of Clicks** ("Start free trial") :- number of unique cookies to click the "Start free trial" button
+ 3. **Click-Through-Probability (CTP)**:- Number of Clicks/Number of Cookies
     
-     Since the experiment triggers after the page loads, there should not be any significant difference in the above metrics between control and experiment group. Any siginifcant difference would indicate a trafffic imbalance issue. 
+     Since the experiment triggers after the page loads, there should not be any significant difference in the above metrics between control and experiment group. Any siginifcant difference would indicate a trafffic imbalance issue.
+
+ **Evaluation Metrics**
+
+ 1. **Gross Conversion** :- number of user-ids enroll in the free trial divided by number of unique cookies to click the "Start free trial" button
+    
+    Expected Direction : **Decrease**
+    If the change made performs as expected the number of user_ids enroll in the course should decrease. Because we expect only commited students to enroll.
+
+ 1. **Retention** :- number of user-ids to remain enrolled past the 14-day boundary divided by number of user-ids to complete checkout
+    
+    Expected Direction : **Increase**
+    The number of user_ids retained after 14 days in the course should increase. Because we know only commited students enrolled.
+
+ 1. **Net Conversion** :- number of user-ids to remain enrolled past the 14-day boundary divided by the number of unique cookies to click the "Start free trial" button
+    
+    Expected Direction : **Increase**
+    the net conversion should see an Increase, as we expect students to entroll and continue past 14 day free trail increase over number of unique cookies to click the "Start free trial" button which is same for both groups
+    
+     
  
 

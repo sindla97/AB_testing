@@ -45,18 +45,18 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 
  1. **Gross Conversion** :- number of user-ids enroll in the free trial divided by number of unique cookies to click the "Start free trial" button
     
-    Expected Direction : **Decrease**
-   - If the change made performs as expected the number of user_ids enroll in the course should decrease. Because we expect only commited students to enroll.
+    Expected Direction : **Decrease**  
+    If the change made performs as expected the number of user_ids enroll in the course should decrease. Because we expect only commited students to enroll.
 
  2. **Retention** :- number of user-ids to remain enrolled past the 14-day boundary divided by number of user-ids to complete checkout
     
-    Expected Direction : **Increase**
-   - The number of user_ids retained after 14 days in the course should increase. Because we know only commited students enrolled.
+    Expected Direction : **Increase**  
+    The number of user_ids retained after 14 days in the course should increase. Because we know only commited students enrolled.
 
  3. **Net Conversion** :- number of user-ids to remain enrolled past the 14-day boundary divided by the number of unique cookies to click the "Start free trial" button
     
-    Expected Direction : **Increase**
-   - The net conversion should see an Increase, as we expect students to entroll and continue past 14 day free trail increase over number of unique cookies to click the "Start free trial" button which is same for both groups
+    Expected Direction : **Increase**  
+    The net conversion should see an Increase, as we expect students to entroll and continue past 14 day free trail increase over number of unique cookies to click the "Start free trial" button which is same for both groups
     
      
  

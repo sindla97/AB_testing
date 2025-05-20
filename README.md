@@ -23,5 +23,12 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 
 
  ## Experiment Design Process
+ 1. Selecting Metrics
+    - Invariant metrics
+    - Evaluation metrics
+ 2. Calculate the Standard deviation of metrics
+ 3. Estimate the sample size for control and experiment group
+ 4. Determine the exposure of the experiment
+ 5. Perform Sanity Checks
  
 

@@ -8,3 +8,20 @@ In the experiment, Udacity tested a change where if the student clicked "start f
 The hypothesis was that this might set clearer expectations for students upfront, thus reducing the number of frustrated students who left the free trial because they didn't have enough time—without significantly reducing the number of students to continue past the free trial and eventually complete the course. If this hypothesis held true, Udacity could improve the overall student experience and improve coaches' capacity to support students who are likely to complete the course.
 
 The unit of diversion is a cookie, although if the student enrolls in the free trial, they are tracked by user-id from that point forward. The same user-id cannot enroll in the free trial twice. For users that do not enroll, their user-id is not tracked in the experiment, even if they were signed in when they visited the course overview page
+
+## Experiment Design
+**Change tested**:  
+- After clicking "Start free trial", students were asked:  
+  **"How much time can you devote to the course?"**  
+  - **≥5 hours/week**: Proceed to checkout as usual.  
+  - **<5 hours/week**: Suggesting free access instead.
+  
+**Hypothesis**:  
+- Setting clearer expectations upfront would:  
+  1. **Reduce frustration** among students who lack time.  
+  2. **Retain enrollments** from committed students (≥5 hrs/week).
+
+
+ ## Experiment Design Process
+ 
+

@@ -14,7 +14,7 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 - After clicking "Start free trial", students were asked:  
   **"How much time can you devote to the course?"**  
   - **≥5 hours/week**: Proceed to checkout as usual.  
-  - **<5 hours/week**: Suggesting free access instead.
+  - **<5 hours/week**: Suggest free access instead.
   
 **Hypothesis**:  
 - Setting clearer expectations upfront would:  
@@ -33,5 +33,11 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  6. Analyze results & Provide recommendations
 
 ### 1. Selecting Metrics:
+ **Invariant Metrics (Sanity Checks)**
+
+ 1. Number of Cookies :- number of unique cookies to view the course overview page
+ 2. Number of Clicks ("Start free trial") :- number of unique cookies to click the "Start free trial" button
+ 4. Click-Through-Probability (CTP):- Number of Clicks/Number of Cookies
+     Since the experiment triggers after the page loads, there should not be any significant difference in the above metrics between control and experiment group. Any siginifcant difference would indicate a trafffic imbalance issue. 
  
 

@@ -38,6 +38,7 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  1. Number of Cookies :- number of unique cookies to view the course overview page
  2. Number of Clicks ("Start free trial") :- number of unique cookies to click the "Start free trial" button
  4. Click-Through-Probability (CTP):- Number of Clicks/Number of Cookies
+    
      Since the experiment triggers after the page loads, there should not be any significant difference in the above metrics between control and experiment group. Any siginifcant difference would indicate a trafffic imbalance issue. 
  
 

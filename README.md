@@ -30,5 +30,8 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  3. Estimate the sample size for control and experiment group
  4. Determine the exposure of the experiment
  5. Perform Sanity Checks
+ 6. Analyze results & Provide recommendations
+
+### 1. Selecting Metrics:
  
 

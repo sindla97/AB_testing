@@ -74,7 +74,7 @@ where:
 
 | Metric          | Baseline Rate (p) | Sample Size (n) | Calculation                      | Standard Error |
 |-----------------|-------------------|-----------------|----------------------------------|----------------|
-| **Gross Conversion** | 0.20625          | 3,200 clicks    | \( \sqrt{\frac{0.20625 \times 0.79375}{3200}} \) | 0.0071         |
+| **Gross Conversion** | 0.20625          | 3,200 clicks    | $$\sqrt{\frac{0.20625 \times 0.79375}{3200}}$$ | 0.0071         |
 | **Net Conversion**   | 0.1093125        | 3,200 clicks    | \( \sqrt{\frac{0.1093125 \times 0.8906875}{3200}} \) | 0.0055         |
 | **Retention**        | 0.53             | 660 enrollments | \( \sqrt{\frac{0.53 \times 0.47}{660}} \)          | 0.0194         |
 

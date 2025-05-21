@@ -64,7 +64,8 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 
 \[
 SE = \sqrt{\frac{p(1-p)}{n}}
-\]  
+\]
+
 where:  
 - \( p \) = Baseline probability of success (e.g., 0.20 for 20% conversion)  
 - \( n \) = Sample size (e.g., number of clicks or enrollments)   

@@ -70,35 +70,18 @@ where:
 - \( p \) = Baseline probability of success (e.g., 0.20 for 20% conversion)  
 - \( n \) = Sample size (e.g., number of clicks or enrollments)
 
-# Standard Error Calculation
+### Standard Error Calculations for Evaluation Metrics
 
-## Binomial Proportion Standard Error
+| Metric          | Baseline Rate (p) | Sample Size (n) | Calculation                      | Standard Error |
+|-----------------|-------------------|-----------------|----------------------------------|----------------|
+| **Gross Conversion** | 0.20625          | 3,200 clicks    | \( \sqrt{\frac{0.20625 \times 0.79375}{3200}} \) | 0.0071         |
+| **Net Conversion**   | 0.1093125        | 3,200 clicks    | \( \sqrt{\frac{0.1093125 \times 0.8906875}{3200}} \) | 0.0055         |
+| **Retention**        | 0.53             | 660 enrollments | \( \sqrt{\frac{0.53 \times 0.47}{660}} \)          | 0.0194         |
 
-For metrics involving proportions (e.g., conversion rates), the standard error is calculated as:
-
-\[
-SE = \sqrt{\frac{p(1-p)}{n}}
-\]
-
-### Variables:
-- \( p \) = Probability of success (baseline rate)
-- \( n \) = Sample size (number of trials)
-
-### Example Calculation:
-If you have:
-- Baseline conversion rate \( p = 0.2 \) (20%)
-- Sample size \( n = 1000 \) users
-
-\[
-SE = \sqrt{\frac{0.2 \times 0.8}{1000}} = \sqrt{\frac{0.16}{1000}} = \sqrt{0.00016} \approx 0.01265
-\]
-
-### Notes:
-1. This formula assumes:
-   - Independent trials
-   - Constant probability of success
-2. For small sample sizes (<30), consider using t-distribution instead
-3. GitHub's native Markdown renderer supports basic LaTeX like this
+#### Key:
+- **Baseline Rate (p)**: Probability of success (enrollment/payment)
+- **Sample Size (n)**: Denominator for each metric (clicks/enrollments)
+- **Calculation**: Binomial proportion formula \( SE = \sqrt{\frac{p(1-p)}{n}} \)
 
 
     

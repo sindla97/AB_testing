@@ -62,26 +62,20 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  Based on the given baseline estimates for each of this metrics we can analytically calculate the standard error.  
  we can use Binomial proportion formula to estimate standard error because they are fundamentally binary outcomes (success/failure) with fixed trial counts, satisfying the core assumptions of binomial distributions.  
 
-\[
-SE = \sqrt{\frac{p(1-p)}{n}}
-\]
+ $$ SE = \sqrt{\frac{p(1-p)}{n}} $$
 
-where:  
-- \( p \) = Baseline probability of success (e.g., 0.20 for 20% conversion)  
-- \( n \) = Sample size (e.g., number of clicks or enrollments)
+ where:  
+ - \( p \) = Baseline probability of success (e.g., 0.20 for 20% conversion)  
+ - \( n \) = Sample size (e.g., number of clicks or enrollments)
 
-### Standard Error Calculations for Evaluation Metrics
+ ### Standard Error Calculations for Evaluation Metrics
+ 
+ | Metric          | Baseline Rate (p) | Sample Size (n) | Calculation                      | Standard Error |
+ |-----------------|-------------------|-----------------|----------------------------------|----------------|
+ | **Gross Conversion** | 0.20625          | 3,200 clicks    | $$\sqrt{\frac{0.20625 \times 0.79375}{3200}}$$ | 0.0071         |
+ | **Net Conversion**   | 0.1093125        | 3,200 clicks    | $$\sqrt{\frac{0.1093125 \times 0.8906875}{3200}}$$ | 0.0055         |
+ | **Retention**        | 0.53             | 660 enrollments | $$\sqrt{\frac{0.53 \times 0.47}{660}}$$         | 0.0194         |
 
-| Metric          | Baseline Rate (p) | Sample Size (n) | Calculation                      | Standard Error |
-|-----------------|-------------------|-----------------|----------------------------------|----------------|
-| **Gross Conversion** | 0.20625          | 3,200 clicks    | $$\sqrt{\frac{0.20625 \times 0.79375}{3200}}$$ | 0.0071         |
-| **Net Conversion**   | 0.1093125        | 3,200 clicks    | \( \sqrt{\frac{0.1093125 \times 0.8906875}{3200}} \) | 0.0055         |
-| **Retention**        | 0.53             | 660 enrollments | \( \sqrt{\frac{0.53 \times 0.47}{660}} \)          | 0.0194         |
-
-#### Key:
-- **Baseline Rate (p)**: Probability of success (enrollment/payment)
-- **Sample Size (n)**: Denominator for each metric (clicks/enrollments)
-- **Calculation**: Binomial proportion formula \( SE = \sqrt{\frac{p(1-p)}{n}} \)
 
 
     

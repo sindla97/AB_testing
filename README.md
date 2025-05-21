@@ -62,7 +62,6 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  Based on the given baseline estimates for each of this metrics we can analytically calculate the standard error.  
  we can use Binomial proportion formula to estimate standard error because they are fundamentally binary outcomes (success/failure) with fixed trial counts, satisfying the core assumptions of binomial distributions.  
 
-For metrics measuring proportions (e.g., conversion rates), use:  
 \[
 SE = \sqrt{\frac{p(1-p)}{n}}
 \]  

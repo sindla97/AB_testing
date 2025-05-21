@@ -68,32 +68,16 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  - \( p \) = Baseline probability of success (e.g., 0.20 for 20% conversion)  
  - \( n \) = Sample size (e.g., number of clicks or enrollments)
 
-\documentclass{article}
-\usepackage{booktabs} % For nicer looking tables
-\usepackage{amsmath}  % For math symbols
+| Metric                                                   | Baseline Value |
+| --------------------------------------------------------- | -------------- |
+| Unique cookies to view course overview page per day      | 40,000         |
+| Unique cookies to click "Start free trial" per day        | 3,200          |
+| Enrollments per day                                     | 660            |
+| Click-through-probability on "Start free trial"          | 0.08           |
+| Probability of enrolling, given click                   | 0.20625        |
+| Probability of payment, given enroll                    | 0.53           |
+| Probability of payment, given click                     | 0.1093125      |
 
-\begin{document}
-
-\begin{table}[ht]
-    \centering
-    \caption{Key Metrics and Conversion Probabilities}
-    \begin{tabular}{@{} l c @{}}
-        \toprule
-        \textbf{Metric} & \textbf{Value} \\
-        \midrule
-        Unique cookies to view course overview page per day & 40,000 \\
-        Unique cookies to click "Start free trial" per day & 3,200 \\
-        Enrollments per day & 660 \\
-        Click-through-probability on "Start free trial" & 0.08 \\
-        Probability of enrolling, given click & 0.20625 \\
-        Probability of payment, given enroll & 0.53 \\
-        Probability of payment, given click & 0.1093125 \\
-        \bottomrule
-    \end{tabular}
-    \label{tab:key_metrics}
-\end{table}
-
-\end{document}
 
 
  ### Standard Error Calculations for Evaluation Metrics

@@ -26,7 +26,7 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  1. Selecting Metrics
     - Invariant metrics
     - Evaluation metrics
- 2. Calculate the Standard deviation of metrics
+ 2. Calculate the Standard error of metrics
  3. Estimate the sample size for control and experiment group
  4. Determine the exposure of the experiment
  5. Perform Sanity Checks
@@ -57,6 +57,17 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
     
     Expected Direction : **Increase**  
     The net conversion should see an Increase, as we expect students to entroll and continue past 14 day free trail increase over number of unique cookies to click the "Start free trial" button which is same for both groups
+
+### 2. Calculate the Standard error of metrics:
+ Based on the given baseline estimates for each of this metrics we can analytically calculate the standard error.  
+ we can use Binomial proportion formula to estimate standard error because they are fundamentally binary outcomes (success/failure) with fixed trial counts, satisfying the core assumptions of binomial distributions.  
+
+                          \[
+SE = \sqrt{\frac{p(1-p)}{n}}
+\]  
+where:  
+- \( p \) = Baseline probability of success (e.g., 0.20 for 20% conversion)  
+- \( n \) = Sample size (e.g., number of clicks or enrollments) 
     
      
  

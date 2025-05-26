@@ -97,13 +97,33 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  3. Type II error rate **$\beta$** = 0.2 
  4. Minimum detectable change in the metric **d_min**
 
- To determine the sample size we need to start with calulating Z vlaue for the given **$\alpha$**. For the given **$\alpha$** =0.05 the $Z_{\alpha/2}$ = 1.96
 
- we then Iterate the value of **N** in the range of 0 to 100000 and calculate **$\beta$**, we stop at min value of N where **$\beta$** < 0.2
+### Determine Critical Z-value
+
+For a significance level of $\alpha$ = 0.05 (two-tailed test), calculate the critical Z-value:
+
+$Z_{\alpha/2} = 1.96$
+
+This defines the rejection region for the null hypothesis.
+
+### Iterative Sample Size Estimation
+
+Evaluate sample sizes ($N$) in the range [0, 100,000] to find the minimum $N$ where:
+
+$\beta(N) \leq 0.2$ (Power $\geq 80\%$)
  
  ![Alt text](https://github.com/sindla97/AB_testing/blob/main/Image.jpeg) 
 
- 
+Here, $\beta$ represents the Type II error rate, computed as:
+
+$\beta = P(\text{Fail to reject } H_0 \mid \text{True effect} = d_{min})$
+
+where $d_{min}$ is the minimum detectable effect size of practical significance.
+
+### Statistical Interpretation
+
+$\beta$ is derived from the cumulative distribution function (CDF) of the effect's sampling distribution, integrated from $-\infty$ to $d_{min}$. The constraint $d_{min} > \alpha$ ensures the effect size exceeds statistical noise.
+
 
 
  

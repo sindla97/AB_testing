@@ -101,25 +101,7 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 
  we then Iterate the value of **N** in the range of 0 to 100000 and calculate **$\beta$**, we stop at min value of N where **$\beta$** < 0.2
 
-mermaid
- graph LR
-    H0["Null Hypothesis (H0)"]
-    H1["Alternative Hypothesis (H1)"]
-    CriticalRegionA("Alpha region")
-    CriticalRegionB("Alpha region")
-    BetaRegion("Beta region")
-    Power("Power (1 - Beta)")
-
-    H0 -- Alpha Region --> CriticalRegionA
-    H0 -- Alpha Region --> CriticalRegionB
-    H1 -- Beta Region --> BetaRegion
-    H1 -- Power --> Power
-
-    H0 -- Non-Rejection --> BetaRegion
-    H1 -- Rejection --> Power
-
-    CriticalRegionA -- "> Z_alpha/2"
-    CriticalRegionB -- "< -Z_alpha/2"
+ ![Alt text](path/to/your/image.jpg) 
 
  
 

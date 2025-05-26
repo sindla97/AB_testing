@@ -140,7 +140,8 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
      for N in Ns:
          if get_beta(z_star, s, d_min, N) <= beta:
              return N
-     return -1 ```
+     return -1
+```
      
 
 

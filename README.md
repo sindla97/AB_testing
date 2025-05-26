@@ -124,7 +124,7 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 
  $\beta$ is derived from the cumulative distribution function (CDF) of the effect's sampling distribution, integrated from $-\infty$ to $d_{min}$. The constraint $d_{min} > \alpha$ ensures the effect size exceeds statistical noise.
 
- `
+ ```python
  def get_z_star(alpha):
     """Returns the critical z-value for a two-tailed test."""
     return -norm.ppf(alpha / 2)
@@ -141,7 +141,7 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
          if get_beta(z_star, s, d_min, N) <= beta:
              return N
      return -1 
-     `
+     
 
 
 

@@ -171,6 +171,9 @@ Experiment Duration (days) $= \frac{\text{Total Required Pageviews}}{\text{Daily
 
 To accomodate for any variations in daily SE of the Gross and Net conversions we can have 23-25 days run period.
 
+###  5. Perform Sanity Checks
+
+
 
 
 

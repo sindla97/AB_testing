@@ -141,9 +141,28 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
          if get_beta(z_star, s, d_min, N) <= beta:
              return N
      return -1
-```
-     
-
+ ```
+ Using the above calculation we determine the N_clicks_gross, N_clicks_net based on the s_gross and s_net
+ ```   
+ s_gross = np.sqrt(p_gross * (1 - p_gross) * 2)  # Pooled SE for two groups
+ s_net = np.sqrt(p_net * (1 - p_net) * 2)
+ 
+ # Calculate required clicks per group
+ N_clicks_gross = required_size(s=s_gross, d_min=d_min_gross, alpha=alpha, beta=beta)
+ N_clicks_net = required_size(s=s_net, d_min=d_min_net, alpha=alpha, beta=beta)
+ 
+ # Convert clicks to pageviews
+ N_pageviews_gross = int(np.ceil(N_clicks_gross / CTP))
+ N_pageviews_net = int(np.ceil(N_clicks_net / CTP))
+ ```
+ Gross Conversion:
+ Requires 2,583 clicks per group.
+ At 8% CTP, this translates to 32,288 pageviews per group.
+ Net Conversion:
+ Requires 3,911 clicks per group.
+ At 8% CTP, this translates to 48,888 pageviews per group.
+ Total Pageviews:
+ 97,776 (since we need the larger of the two metrics, multiplied by 2 for control/treatment groups)
 
 
  

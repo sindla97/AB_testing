@@ -101,7 +101,7 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 
  we then Iterate the value of **N** in the range of 0 to 100000 and calculate **$\beta$**, we stop at min value of N where **$\beta$** < 0.2
 
- ![Alt text](path/to/your/image.jpg) 
+ ![Alt text](https://github.com/sindla97/AB_testing/blob/main/Image.jpeg) 
 
  
 

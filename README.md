@@ -101,6 +101,7 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
 
  we then Iterate the value of **N** in the range of 0 to 100000 and calculate **$\beta$**, we stop at min value of N where **$\beta$** < 0.2
 
+mermaid
  graph LR
     H0["Null Hypothesis (H0)"]
     H1["Alternative Hypothesis (H1)"]

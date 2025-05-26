@@ -100,8 +100,8 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  To determine the sample size we need to start with calulating Z vlaue for the given **$\alpha$**. For the given **$\alpha$** =0.05 the $Z_{\alpha/2}$ = 1.96
 
  we then Iterate the value of **N** in the range of 0 to 100000 and calculate **$\beta$**, we stop at min value of N where **$\beta$** < 0.2
-
-           ![Alt text](https://github.com/sindla97/AB_testing/blob/main/Image.jpeg) 
+ 
+ ![Alt text](https://github.com/sindla97/AB_testing/blob/main/Image.jpeg) 
 
  
 

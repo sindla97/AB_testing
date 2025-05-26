@@ -88,14 +88,16 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  | **Net Conversion**   | 0.1093125        | 3,200 clicks    | $$\sqrt{\frac{0.1093125 \times 0.8906875}{3200}}$$ | 0.0055         |
  | **Retention**        | 0.53             | 660 enrollments | $$\sqrt{\frac{0.53 \times 0.47}{660}}$$         | 0.0194         |
 
- Note: When the sample size is large engough Analytical estimates of Standard Error would be suuficent, incase of small sample size estimating SE using Empirical estimates is suggested.  
+ Note: When the sample size is large engough Analytical estimates of Standard Error would be sufficient, incase of small sample size estimating SE using Empirical estimates is suggested.  
 
 ### 3. Estimate the sample size for control and experiment groups
  Sample size estimation depends on several factors.
  1. Estimated SE from the previous step.
  2. Type I error rate **$\alpha$** or Significance level = 0.05
  3. Type II error rate **$\beta$** = 0.2 
- 4. Minimum detectable change in the metric
+ 4. Minimum detectable change in the metric **d_min**
+
+ To determine the sample size we need to start with calulating Z vlaue for the given **$\alpha$**. For the given **$\alpha$** =0.05 the $Z_{\alpha/2}$ = 1.96
 
 
  

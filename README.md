@@ -155,14 +155,14 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  N_pageviews_gross = int(np.ceil(N_clicks_gross / CTP))
  N_pageviews_net = int(np.ceil(N_clicks_net / CTP))
  ```
- Gross Conversion:
- Requires 2,583 clicks per group.
- At 8% CTP, this translates to 32,288 pageviews per group.
- Net Conversion:
- Requires 3,911 clicks per group.
- At 8% CTP, this translates to 48,888 pageviews per group.
- Total Pageviews:
- 97,776 (since we need the larger of the two metrics, multiplied by 2 for control/treatment groups)
+ Gross Conversion:  
+ Requires 2,583 clicks per group.  
+ At 8% CTP, this translates to 32,288 pageviews per group.  
+ Net Conversion:  
+ Requires 3,911 clicks per group.  
+ At 8% CTP, this translates to 48,888 pageviews per group.  
+ Total Pageviews:  
+ 97,776 (since we need the larger of the two metrics, multiplied by 2 for control/treatment groups)  
 
 
  

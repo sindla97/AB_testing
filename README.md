@@ -165,11 +165,11 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  Max of two metrics groups translates to **697125**
 
 ### 4. Determine the exposure of the experiment
- To determine the required runtime for this A/B test, we begin with the statistically derived sample size of 488,880 total pageviews. Given Udacity's baseline of 40,000 daily pageviews, a 50% traffic allocation yields 20,000 pageviews/day (10,000 per group). 
+ To determine the required runtime for this A/B test, we begin with the statistically derived sample size of 697,125 total pageviews. Given Udacity's baseline of 40,000 daily pageviews, a 50% traffic allocation yields 20,000 pageviews/day (10,000 per group). 
 
-Experiment Duration (days) $= \frac{\text{Total Required Pageviews}}{\text{Daily Diverted Traffic}} = \frac{697,125}{20,000} = 24.44 \approx 25 \text{ days}$
+Experiment Duration (days) $= \frac{\text{Total Required Pageviews}}{\text{Daily Diverted Traffic}} = \frac{697,125}{20,000} = 34.85 \approx 35 \text{ days}$
 
-To accomodate for any variations in daily SE of the Gross and Net conversions we can have 23-25 days run period.
+To accomodate for any variations in daily SE of the Gross and Net conversions we can have 33-35 days run period.
 
 ###  5. Perform Sanity Checks
 

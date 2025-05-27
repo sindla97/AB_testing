@@ -156,18 +156,18 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  N_pageviews_net = int(np.ceil(N_clicks_net / CTP))
  ```
  Gross Conversion:  
- Requires **2,5830** clicks for two groups.  
- At 8% CTP, this translates to **322,880** pageviews for two groups.  
+ Requires **52748** clicks for two groups.  
+ At 8% CTP, this translates to **659350** pageviews for two groups.  
  Net Conversion:  
- Requires **3,911** clicks for two groups.  
- At 8% CTP, this translates to **488,880** pageviews for two groups.  
+ Requires **55770** clicks for two groups.  
+ At 8% CTP, this translates to **697125** pageviews for two groups.  
  Total Pageviews:  
- Max of two metrics groups translates to **488,880***
+ Max of two metrics groups translates to **697125**
 
 ### 4. Determine the exposure of the experiment
  To determine the required runtime for this A/B test, we begin with the statistically derived sample size of 488,880 total pageviews. Given Udacity's baseline of 40,000 daily pageviews, a 50% traffic allocation yields 20,000 pageviews/day (10,000 per group). 
 
-Experiment Duration (days) $= \frac{\text{Total Required Pageviews}}{\text{Daily Diverted Traffic}} = \frac{488,880}{20,000} = 24.44 \approx 25 \text{ days}$
+Experiment Duration (days) $= \frac{\text{Total Required Pageviews}}{\text{Daily Diverted Traffic}} = \frac{697,125}{20,000} = 24.44 \approx 25 \text{ days}$
 
 To accomodate for any variations in daily SE of the Gross and Net conversions we can have 23-25 days run period.
 

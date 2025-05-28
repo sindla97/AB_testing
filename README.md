@@ -56,7 +56,7 @@ The unit of diversion is a cookie, although if the student enrolls in the free t
  3. **Net Conversion** :- number of user-ids to remain enrolled past the 14-day boundary divided by the number of unique cookies to click the "Start free trial" button
     
     Expected Direction : **Increase**  
-    The net conversion should see an Increase, as we expect students to entroll and continue past 14 day free trail increase over number of unique cookies to click the "Start free trial" button which is same for both groups
+    The net conversion should see an Increase, as we expect students to entroll and continue past 14 day free trail to increase over number of unique cookies to click the "Start free trial" button which is same for both groups
 
 ### 2. Calculate the Standard error of metrics:
  Based on the given baseline estimates for each of this metrics we can analytically calculate the standard error.  

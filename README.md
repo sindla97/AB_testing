@@ -172,7 +172,8 @@ Experiment Duration (days) $= \frac{\text{Total Required Pageviews}}{\text{Daily
 To accomodate for any variations in daily SE of the Gross and Net conversions we can have 33-35 days run period.
 
 ###  5. Perform Sanity Checks
-Sanity checks are conducted to ensure that the random assignment of users to control and experiment groups was properly implemented. Specifically, we test whether the number of page views and clicks are evenly distributed between the two groups. For page views, this confirms that traffic was split at random, validating the integrity of the experimental setup. Similarly, checking the distribution of clicks helps identify any unintentional bias in user exposure or interaction due to the assignment mechanism. Passing these sanity checks provides confidence that any observed differences in outcome metrics can be attributed to the experimental treatment rather than flaws in group allocation.
+Sanity checks are conducted to ensure that the random assignment of users to control and experiment groups was properly implemented. Specifically, we test whether the number of page views and clicks are evenly distributed between the two groups. For page views, this confirms that traffic was split at random, validating the integrity of the experimental setup. Similarly, checking the distribution of clicks helps identify any unintentional bias in user exposure or interaction due to the assignment mechanism. Passing these sanity checks provides confidence that any observed differences in outcome metrics can be attributed to the experimental treatment rather than flaws in group allocation.  
+
 **Pageviews** 
 ```
 # No of pageviews

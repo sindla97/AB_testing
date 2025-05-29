@@ -260,11 +260,10 @@ SE=np.sqrt((pooled_prop*(1-pooled_prop))*((1/summary_df.loc[0,'Clicks'])+(1/summ
 
 z=norm.ppf(alpha / 2)
 
-CI_upper_limit = -z * SE
-CI_lower_limit = z * SE
-
 diff= GC_exp-GC_ctrl
 
+CI_upper_limit = diff - z * SE
+CI_lower_limit = diff + z * SE
 
 print(f'Standard Error ={SE}\nP_exp - P_ctrl = {diff}\nMarginal error = {z * SE}\nconfidence interval = {[CI_lower_limit,CI_upper_limit]}\n')
 
@@ -276,9 +275,10 @@ Pooled proportion :0.20860706740369866
 Standard Error =0.004371675385225936
 P_exp - P_ctrl = -0.020554874580361565
 Marginal error = -0.008568326307143104
-confidence interval = [-0.008568,0.008568]
+confidence interval = [-0.02912, -0.01198]
 
-The observed difference in Gross Conversion between the experiment and control groups is statistically significant at the 5% significance level : **diff =-0.0206** is outside **confidence interval [-0.0086, 0.0086].**
+
+The observed difference in Gross Conversion between the experiment and control groups is statistically significant at the 5% significance level : **0** is outside **confidence interval [-0.02912, -0.01198].**
 
 **Therefore, we reject the null hypothesis and conclude that there is evidence of a difference in Gross Conversion between the two groups.**
 
@@ -302,10 +302,10 @@ SE=np.sqrt((pooled_prop*(1-pooled_prop))*((1/summary_df.loc[0,'Clicks'])+(1/summ
 
 z=norm.ppf(alpha / 2)
 
-CI_upper_limit = -z * SE
-CI_lower_limit = z * SE
-
 diff= NC_exp-NC_ctrl
+
+CI_upper_limit = diff - z * SE
+CI_lower_limit = diff + z * SE
 
 print(f'Standard Error ={SE}\nP_exp - P_ctrl = {diff}\nMarginal error = {z * SE}\nconfidence interval = {[CI_lower_limit,CI_upper_limit]}\n')
 ```
@@ -316,13 +316,15 @@ Pooled proportion :0.1151274853124186
 Standard Error =0.0034341335129324238
 P_exp - P_ctrl = -0.0048737226745441675
 Marginal error = -0.006730778003449568
-confidence interval = [-0.00673, 0.00673]
+confidence interval = [-0.01160,0.00185]
 
-The observed difference in Net Conversion between the experiment and control groups is not statistically significant at the 5% significance level : **diff =-0.0049** is inside **confidence interval [-0.0067, 0.0067].**
+
+The observed difference in Net Conversion between the experiment and control groups is not statistically significant at the 5% significance level : **0** is inside **confidence interval [-0.01160,0.00185].**
 
 **Therefore, we fail to reject the null hypothesis and conclude that there is no evidence of a difference in Gross Conversion between the two groups.**
 
 
+ ## Summary
  
 
     

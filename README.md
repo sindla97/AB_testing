@@ -173,7 +173,7 @@ To accomodate for any variations in daily SE of the Gross and Net conversions we
 
 ###  5. Perform Sanity Checks
 Sanity checks are conducted to ensure that the random assignment of users to control and experiment groups was properly implemented. Specifically, we test whether the number of page views and clicks are evenly distributed between the two groups. For page views, this confirms that traffic was split at random, validating the integrity of the experimental setup. Similarly, checking the distribution of clicks helps identify any unintentional bias in user exposure or interaction due to the assignment mechanism. Passing these sanity checks provides confidence that any observed differences in outcome metrics can be attributed to the experimental treatment rather than flaws in group allocation.
-
+**Pageviews** 
 ```
 # No of pageviews
 # H0: proportion_pv_exp = proportion_pv_ctrl
@@ -193,10 +193,30 @@ zstat, pval = proportions_ztest(count=[ctrl_PV,exp_PV], nobs=[total,total], valu
 print(f"Two-proportion z-test p-value: {pval:.3f} , Zstat : {zstat}")
 
 Two-proportion z-test p-value: 0.133 , Zstat : 1.503097941694545
-# There is no evidence the Pageviews in control and experiment groups are different
+There is no evidence the Pageviews in control and experiment groups are different
 ```
+**No of Clicks** 
+```
+# No of clicks
+# H0: proportion_clicks_exp = proportion_clicks_ctrl
+# H1: proportion_clicks_exp <> proportion_clicks_ctrl
 
 
+ctrl_clicks=df_control['Clicks'].sum()
+exp_clicks=df_experiment['Clicks'].sum()
+
+total=(ctrl_clicks+exp_clicks)
+
+print(total,ctrl_clicks,exp_clicks)
+
+from statsmodels.stats.proportion import proportions_ztest
+
+zstat, pval = proportions_ztest(count=[ctrl_clicks,exp_clicks], nobs=[total,total], value=0.0, alternative='two-sided')
+print(f"Two-proportion z-test p-value: {pval:.3f} , Zstat : {zstat}")
+
+Two-proportion z-test p-value: 0.753 , Zstat : 0.314766024552368
+# There is no evidence the Clicks in control and experiment groups are different
+```
 
 
 

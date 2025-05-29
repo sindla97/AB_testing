@@ -325,6 +325,10 @@ The observed difference in Net Conversion between the experiment and control gro
 
 
  ## Summary
+ The experiment aimed to assess whether changes led to improvements in user conversions. Analysis of **Gross Conversion** (enrollments per click) showed a statistically significant decline in the experiment group compared to the control group. The observed difference was approximately **-2.06%**, and the 95% confidence interval for the difference \([-2.92\%, -1.20\%]\) does **not** include zero. This indicates a real and negative impact on Gross Conversion, suggesting that fewer users enrolled after clicking during the experiment.
+
+In contrast, the **Net Conversion** (payments per click) difference between the two groups was approximately **-0.49%**, with a 95% confidence interval of \([-1.16\%, 0.18\%]\), which **includes** zero. This means we fail to find statistically significant evidence of any improvement in payment behavior. Since the experiment led to a significant drop in Gross Conversion without a corresponding gain in Net Conversion, we conclude that the tested changes are not beneficial and **recommend not launching the experiment**.
+
  
 
     

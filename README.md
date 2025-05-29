@@ -241,6 +241,86 @@ Two-proportion t-test p-value: 0.934 , tstat : -0.08302608446561602
 
 ### 6. Analyze results & Provide recommendations
 
+**1. Gross Conversion:**
+```
+# checking if Gross conversion is significantly different in experiment vs control
+# Total enrollments/Clicks
+
+alpha=0.05
+
+GC_ctrl=summary_df.loc[0,'Enrollments']/summary_df.loc[0,'Clicks']
+GC_exp=summary_df.loc[1,'Enrollments']/summary_df.loc[1,'Clicks']
+
+pooled_prop= (summary_df.loc[0,'Enrollments']+summary_df.loc[1,'Enrollments'])/(summary_df.loc[0,'Clicks']+summary_df.loc[1,'Clicks'])
+
+
+print(f'Gross Conversion Experiment : {GC_exp}\nGross Conversion Control : {GC_ctrl}\nPooled proportion :{pooled_prop}')
+
+SE=np.sqrt((pooled_prop*(1-pooled_prop))*((1/summary_df.loc[0,'Clicks'])+(1/summary_df.loc[1,'Clicks'])))
+
+z=norm.ppf(alpha / 2)
+
+CI_upper_limit = -z * SE
+CI_lower_limit = z * SE
+
+diff= GC_exp-GC_ctrl
+
+
+print(f'Standard Error ={SE}\nP_exp - P_ctrl = {diff}\nMarginal error = {z * SE}\nconfidence interval = {[CI_lower_limit,CI_upper_limit]}\n')
+
+```  
+**Result:**
+Gross Conversion Experiment : 0.19831981460023174
+Gross Conversion Control : 0.2188746891805933
+Pooled proportion :0.20860706740369866
+Standard Error =0.004371675385225936
+P_exp - P_ctrl = -0.020554874580361565
+Marginal error = -0.008568326307143104
+confidence interval = [-0.008568,0.008568]
+
+The observed difference in Gross Conversion between the experiment and control groups is statistically significant at the 5% significance level : **diff =-0.0206** is outside **confidence interval [-0.0086, 0.0086].**
+
+**Therefore, we reject the null hypothesis and conclude that there is evidence of a difference in Gross Conversion between the two groups.**
+
+**2. Net Conversion:**  
+```
+# checking if Net conversion is significantly different in experiment vs control
+# Total Payments/Clicks
+
+alpha=0.05
+
+NC_ctrl=summary_df.loc[0,'Payments']/summary_df.loc[0,'Clicks']
+NC_exp=summary_df.loc[1,'Payments']/summary_df.loc[1,'Clicks']
+
+pooled_prop= (summary_df.loc[0,'Payments']+summary_df.loc[1,'Payments'])/(summary_df.loc[0,'Clicks']+summary_df.loc[1,'Clicks'])
+
+
+print(f'Gross Conversion Experiment : {GC_exp}\nGross Conversion Control : {GC_ctrl}\nPooled proportion :{pooled_prop}')
+
+
+SE=np.sqrt((pooled_prop*(1-pooled_prop))*((1/summary_df.loc[0,'Clicks'])+(1/summary_df.loc[1,'Clicks'])))
+
+z=norm.ppf(alpha / 2)
+
+CI_upper_limit = -z * SE
+CI_lower_limit = z * SE
+
+diff= NC_exp-NC_ctrl
+
+print(f'Standard Error ={SE}\nP_exp - P_ctrl = {diff}\nMarginal error = {z * SE}\nconfidence interval = {[CI_lower_limit,CI_upper_limit]}\n')
+```
+**Result:**  
+Gross Conversion Experiment : 0.19831981460023174
+Gross Conversion Control : 0.2188746891805933
+Pooled proportion :0.1151274853124186
+Standard Error =0.0034341335129324238
+P_exp - P_ctrl = -0.0048737226745441675
+Marginal error = -0.006730778003449568
+confidence interval = [-0.00673, 0.00673]
+
+The observed difference in Net Conversion between the experiment and control groups is not statistically significant at the 5% significance level : **diff =-0.0049** is inside **confidence interval [-0.0067, 0.0067].**
+
+**Therefore, we fail to reject the null hypothesis and conclude that there is no evidence of a difference in Gross Conversion between the two groups.**
 
 
  

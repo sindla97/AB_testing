@@ -172,6 +172,30 @@ Experiment Duration (days) $= \frac{\text{Total Required Pageviews}}{\text{Daily
 To accomodate for any variations in daily SE of the Gross and Net conversions we can have 33-35 days run period.
 
 ###  5. Perform Sanity Checks
+Sanity checks are conducted to ensure that the random assignment of users to control and experiment groups was properly implemented. Specifically, we test whether the number of page views and clicks are evenly distributed between the two groups. For page views, this confirms that traffic was split at random, validating the integrity of the experimental setup. Similarly, checking the distribution of clicks helps identify any unintentional bias in user exposure or interaction due to the assignment mechanism. Passing these sanity checks provides confidence that any observed differences in outcome metrics can be attributed to the experimental treatment rather than flaws in group allocation.
+
+```
+# No of pageviews
+# H0: proportion_pv_exp = proportion_pv_ctrl
+# H1: proportion_pv_exp <> proportion_pv_ctrl
+
+
+ctrl_PV=df_control['Pageviews'].sum()
+exp_PV=df_experiment['Pageviews'].sum()
+
+total=(ctrl_PV+exp_PV)
+
+print(total,ctrl_PV,exp_PV)
+
+from statsmodels.stats.proportion import proportions_ztest
+
+zstat, pval = proportions_ztest(count=[ctrl_PV,exp_PV], nobs=[total,total], value=0.0, alternative='two-sided')
+print(f"Two-proportion z-test p-value: {pval:.3f} , Zstat : {zstat}")
+
+Two-proportion z-test p-value: 0.133 , Zstat : 1.503097941694545
+# There is no evidence the Pageviews in control and experiment groups are different
+```
+
 
 
 

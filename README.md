@@ -194,7 +194,7 @@ zstat, pval = proportions_ztest(count=[ctrl_PV,exp_PV], nobs=[total,total], valu
 print(f"Two-proportion z-test p-value: {pval:.3f} , Zstat : {zstat}")
 
 Two-proportion z-test p-value: 0.133 , Zstat : 1.503097941694545
-There is no evidence the Pageviews in control and experiment groups are different
+# There is no evidence the Pageviews in control and experiment groups are different
 ```
 **No of Clicks** 
 ```
@@ -218,8 +218,21 @@ print(f"Two-proportion z-test p-value: {pval:.3f} , Zstat : {zstat}")
 Two-proportion z-test p-value: 0.753 , Zstat : 0.314766024552368
 # There is no evidence the Clicks in control and experiment groups are different
 ```
+**Click through Probability**
 
+We used a two-sample t-test to compare the mean Click-Through Probability (CTP) between the control and experiment groups. The t-test allows us to determine whether there is a statistically significant difference in average CTP between the two groups. This is relevant in the experimental context as it helps assess whether the experiment had an impact on how frequently users clicked after viewing a page, beyond just aggregate metrics, by capturing daily-aggregated behavioral changes.
+```
+from scipy.stats import ttest_ind
 
+control_ctp =  df_control['Clicks']/df_control['Pageviews']
+experiment_ctp = df_experiment['Clicks']/df_experiment['Pageviews']
+
+tstat, pval = ttest_ind(control_ctp, experiment_ctp)
+print(f"Two-proportion t-test p-value: {pval:.3f} , tstat : {tstat}")
+
+Two-proportion t-test p-value: 0.934 , tstat : -0.08302608446561602
+# There is no evidence the CTP in control and experiment groups are different
+```
 
 
  

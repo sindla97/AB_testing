@@ -174,7 +174,7 @@ To accomodate for any variations in daily SE of the Gross and Net conversions we
 ###  5. Perform Sanity Checks
 Sanity checks are conducted to ensure that the random assignment of users to control and experiment groups was properly implemented. Specifically, we test whether the number of page views and clicks are evenly distributed between the two groups. For page views, this confirms that traffic was split at random, validating the integrity of the experimental setup. Similarly, checking the distribution of clicks helps identify any unintentional bias in user exposure or interaction due to the assignment mechanism. Passing these sanity checks provides confidence that any observed differences in outcome metrics can be attributed to the experimental treatment rather than flaws in group allocation.  
 
-**Pageviews** 
+**1. Pageviews** 
 ```
 # No of pageviews
 # H0: proportion_pv_exp = proportion_pv_ctrl
@@ -196,7 +196,9 @@ print(f"Two-proportion z-test p-value: {pval:.3f} , Zstat : {zstat}")
 Two-proportion z-test p-value: 0.133 , Zstat : 1.503097941694545
 # There is no evidence the Pageviews in control and experiment groups are different
 ```
-**No of Clicks** 
+**Result:Pass, There is no evidence the Pageviews in control and experiment groups are different** 
+
+**2. No of Clicks** 
 ```
 # No of clicks
 # H0: proportion_clicks_exp = proportion_clicks_ctrl
@@ -218,7 +220,9 @@ print(f"Two-proportion z-test p-value: {pval:.3f} , Zstat : {zstat}")
 Two-proportion z-test p-value: 0.753 , Zstat : 0.314766024552368
 # There is no evidence the Clicks in control and experiment groups are different
 ```
-**Click through Probability**
+**Result:Pass, There is no evidence the Clicks in control and experiment groups are different** 
+
+**3. Click through Probability**
 
 We used a two-sample t-test to compare the mean Click-Through Probability (CTP) between the control and experiment groups. The t-test allows us to determine whether there is a statistically significant difference in average CTP between the two groups. This is relevant in the experimental context as it helps assess whether the experiment had an impact on how frequently users clicked after viewing a page, beyond just aggregate metrics, by capturing daily-aggregated behavioral changes.
 ```
@@ -233,6 +237,10 @@ print(f"Two-proportion t-test p-value: {pval:.3f} , tstat : {tstat}")
 Two-proportion t-test p-value: 0.934 , tstat : -0.08302608446561602
 # There is no evidence the CTP in control and experiment groups are different
 ```
+**Result:Pass, There is no evidence the CTP in control and experiment groups are different** 
+
+### 6. Analyze results & Provide recommendations
+
 
 
  
